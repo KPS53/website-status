@@ -7,7 +7,7 @@ const yzzy_api = new MessageButton().setStyle('url').setLabel('YZZY api').setURL
 
 client.on('ready', async () => console.log(`${client.user.username} are ready !`) );
 
-client.on("message", async (message) => {
+client.on("messageCreate", async (message) => {
     if(message.author.bot) return;
     const messageArray = message.content.split(" "), cmd = messageArray[0];
     if (cmd === `=status`) {   
